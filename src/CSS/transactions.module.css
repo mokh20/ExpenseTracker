@@ -1,0 +1,37 @@
+.transactions {
+  display: grid;
+  text-align: left;
+  width: 100%;
+  margin-top: 2rem;
+}
+.transactions input {
+  background-color: rgb(228, 228, 228);
+  border: none;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+}
+.transactionItem {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+  background-color: #eaeaea;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+}
+/* .income,
+.expense {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+} */
+.income {
+  color: rgb(58, 175, 8);
+}
+.expense {
+  color: red;
+}

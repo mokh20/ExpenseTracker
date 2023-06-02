@@ -1,5 +1,13 @@
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  display: grid;
+  justify-content: center;
 }
 
 .App-logo {

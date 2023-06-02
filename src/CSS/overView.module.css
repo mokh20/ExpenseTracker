@@ -1,0 +1,47 @@
+.container {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.result,
+.calculate {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  width: 400px;
+}
+
+.result button {
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+}
+.expense,
+.income {
+  display: flex;
+  padding: 0rem 1rem;
+  justify-content: space-evenly;
+  border: 1px solid rgb(192, 192, 192);
+  width: 100%;
+  border-radius: 5px;
+  justify-items: start;
+  height: 80px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.expense span,
+.income span {
+  font-size: 0.7rem;
+}
+.expense p {
+  color: red;
+  font-weight: bold;
+}
+.income p {
+  color: rgb(60, 195, 10);
+  font-weight: bold;
+}
