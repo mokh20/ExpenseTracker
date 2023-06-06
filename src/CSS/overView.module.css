@@ -15,10 +15,17 @@
 }
 
 .result button {
-  color: white;
-  background-color: black;
   border-radius: 5px;
-  padding: 0.2rem 0.5rem;
+  padding: 0.5rem;
+  background-color: #ffff;
+}
+.cancel {
+  border: 1px solid red;
+  color: red;
+}
+.add {
+  color: #3cc30a;
+  border: 1px solid #3cc30a;
 }
 .expense,
 .income {

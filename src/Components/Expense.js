@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
-import styles from "../CSS/expense.module.css";
+// import styles from "../CSS/expense.module.css";
 import Transactions from "./Transactions";
 import OverView from "./OverView";
 
 const Expense = () => {
+  // States
   const [expense, setExpense] = useState(0);
   const [income, setIncome] = useState(0);
   const [transactions, setTransactions] = useState([]);
+
   const addNewTransaction = (formValues) => {
+    console.log(formValues);
+    // get transaction & set id
     const data = { ...formValues, id: Date.now() };
     setTransactions([...transactions, data]);
   };
@@ -23,7 +27,7 @@ const Expense = () => {
     setIncome(inc);
   }, [transactions]);
   return (
-    <div className={styles.container}>
+    <div>
       <OverView
         income={income}
         expense={expense}

@@ -1,18 +1,24 @@
 import { useState } from "react";
 import styles from "../CSS/overView.module.css";
-import TransactionForm from "./TransactionForm";
+import TransActionForm from "./TransActionForm";
 
 const OverView = ({ income, expense, addNewTransaction }) => {
   const [isShow, setIsShow] = useState(false);
+  const balance = income - expense;
   return (
     <div className={styles.container}>
       <div className={styles.result}>
-        <h5>Balance : {income - expense}$</h5>
-        <button onClick={() => setIsShow((prevState) => !prevState)}>
+        <h5 style={{ color: balance < 0 ? "red" : "green" }}>
+          Balance : {balance}$
+        </h5>
+        <button
+          className={isShow ? styles.cancel : styles.add}
+          onClick={() => setIsShow((prevState) => !prevState)}
+        >
           {isShow ? "Cancel" : "ADD"}
         </button>
       </div>
-      {isShow && <TransactionForm addNewTransaction={addNewTransaction} />}
+      {isShow && <TransActionForm addNewTransaction={addNewTransaction} />}
       <div className={styles.calculate}>
         <div className={styles.expense}>
           <span>Expense</span>

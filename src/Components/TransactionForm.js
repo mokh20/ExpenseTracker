@@ -7,9 +7,11 @@ const TransactionForm = ({ addNewTransaction }) => {
     desc: "",
     type: "expense",
   });
+  // save input value
   const changeHandler = (e) => {
     setFormValue({ ...formValues, [e.target.name]: e.target.value });
   };
+  // add New Transition & reset form
   const submitTransaction = (e) => {
     e.preventDefault();
     addNewTransaction(formValues);
@@ -23,17 +25,17 @@ const TransactionForm = ({ addNewTransaction }) => {
     <form action={""} onSubmit={submitTransaction}>
       <div className={styles.detailsAction}>
         <input
-          type="number"
-          name="amount"
-          placeholder="Amount"
-          value={parseFloat(formValues.amount)}
-          onChange={changeHandler}
-        />
-        <input
           type="text"
           name="desc"
           placeholder="Description"
           value={formValues.desc}
+          onChange={changeHandler}
+        />
+        <input
+          type="number"
+          name="amount"
+          placeholder="Amount"
+          value={parseFloat(formValues.amount)}
           onChange={changeHandler}
         />
       </div>
